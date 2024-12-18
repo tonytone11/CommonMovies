@@ -11,14 +11,6 @@ app.get('', (req, res) => {
     })
 })
 
-app.get('/help/*', (req, res) => {
-    res.render('404', {
-        title: '404',
-        name: 'Anthony Montesdeoca',
-        errorMessage: 'Help article not found.'
-    })
-})
-
 app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
