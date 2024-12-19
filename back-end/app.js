@@ -5,8 +5,11 @@ const getMovies = require("./utils/movies");
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../front-end/public');
 const viewsPath = path.join(__dirname, '../front-end/public/view');
+
+//Setup static directory and view locations
 
 app.get('/', (req, res) => {
     res.send("aa")
