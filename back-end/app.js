@@ -2,7 +2,11 @@ const path = require("path");
 const express = require("express");
 const getMovies = require("./utils/movies");
 
+const app = express();
 const port = process.env.PORT || 3000;
+
+const publicDirectoryPath = path.join(__dirname, '../front-end/public');
+const viewsPath = path.join(__dirname, '../front-end/public/view');
 
 app.get('/', (req, res) => {
     res.send("aa")
