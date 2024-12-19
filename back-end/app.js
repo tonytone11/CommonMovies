@@ -10,6 +10,10 @@ const publicDirectoryPath = path.join(__dirname, '../front-end/public');
 const viewsPath = path.join(__dirname, '../front-end/public/view');
 
 //Setup static directory and view locations
+app.set('view', viewsPath);
+
+//Setup static directory to serve
+app.use(express.static(publicDirectoryPath));
 
 app.get('/', (req, res) => {
     res.send("aa")
